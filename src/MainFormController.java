@@ -7,6 +7,7 @@ public class MainFormController {
     public TextField txtOutputUsername;
     public TextField txtOutputUsernameFillWithEnter;
     public TextField txtOutputUsernameWithKeyPress;
+    public TextField txtOutputUsernameWithKeyReleased;
 
     public void btnPrintOnAction(ActionEvent actionEvent) {
         txtOutputUsername.setText(txtUsername.getText());
@@ -18,5 +19,9 @@ public class MainFormController {
 
     public void txtUserNameKeyPressOnAction(KeyEvent keyEvent) {
         txtOutputUsernameWithKeyPress.setText(txtUsername.getText());
+    }
+
+    public void txtUserNameKeyReleasedOnAction(KeyEvent keyEvent) {
+        txtOutputUsernameWithKeyReleased.setText(txtUsername.getText());
     }
 }
