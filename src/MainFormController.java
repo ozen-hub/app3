@@ -9,6 +9,15 @@ public class MainFormController {
     public TextField txtOutputUsernameWithKeyPress;
     public TextField txtOutputUsernameWithKeyReleased;
 
+    public void initialize(){
+
+        txtUsername.textProperty().addListener((observable, oldValue, newValue) -> {
+            System.out.println(oldValue);
+            System.out.println(newValue);
+        });
+
+    }
+
     public void btnPrintOnAction(ActionEvent actionEvent) {
         txtOutputUsername.setText(txtUsername.getText());
     }
